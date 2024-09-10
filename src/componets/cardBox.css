@@ -1,0 +1,16 @@
+.cardBox {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem;
+    width: 16rem;
+    max-height: 16rem;
+    aspect-ratio: 1;
+    flex: 1 1 25%;
+    --border-right: 4px solid var(--green);
+    --border-bottom: 4px solid var(--green);
+
+
+    box-shadow: 2px 2px 8px var(--green);
+}

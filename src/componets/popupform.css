@@ -1,0 +1,48 @@
+.form-section form {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 50%;
+    flex: 1;
+    background-color: var(--green);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.form-section input{
+    height: 2rem;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 0px 1rem;
+    color:black;
+    border: 1px solid black;
+}
+.form-section input:focus{
+    outline-width: 0px;
+}
+.form-section input.submit{
+    cursor: pointer;
+    
+}
+.form-section img{
+    width: 50%;
+    margin-left: 25%;
+}
+.form-section textarea{
+    height: 8rem;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 0px 1rem;
+    color:black;
+    border: 1px solid black;
+}
+.form-section{
+    display: flex;
+    width: 1000px;
+    height: fit-content;
+    justify-content: center;
+    position: fixed;
+    top: 300px;
+
+    
+}

@@ -1,0 +1,21 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app-wrapper{
+
+  position: relative;
+
+
+}
+.no-scroll{
+  overflow: hidden;
+}
+.anchor{
+  display: block;
+  position: relative;
+  top: -130px;
+  visibility: hidden;
+}

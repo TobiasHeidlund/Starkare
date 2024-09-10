@@ -1,0 +1,12 @@
+.reviews{
+    
+
+
+    .hide{
+        display: none;
+    }
+    div{
+        background-color: var(--green);
+    }
+    
+}

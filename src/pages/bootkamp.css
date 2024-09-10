@@ -1,0 +1,73 @@
+div .bootcamp{
+    .margin0bottom{
+        margin-bottom: 0px;
+    }
+
+
+    .head{
+        background-image: url("../assets/b3.jpg");
+        background-size: cover;
+        background-position-x: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 2/1;
+        .centered{
+            width: 60%;
+        }
+        color: var(--green);
+        border: solid 5px black;
+    }
+    .body{
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .list{
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li{
+                width: fit-content;
+            }
+        }
+        .list2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li{
+                list-style-type: none;
+                width: fit-content;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            input{
+                background-color: ghostwhite;
+                color: black;
+                margin: .5rem;
+                height: 3rem;
+                border-radius: 10px;
+                border: solid 2px black;
+                padding-left: 1rem;
+            }
+            textarea{
+                padding-left: 1rem;
+                background-color: ghostwhite;
+                color: black;
+                border: solid 2px black;
+                padding-top: 1rem;
+                margin: .5rem;
+                height: 2rem;
+                border-radius: 10px;
+            }
+        }
+    }
+}
