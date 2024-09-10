@@ -1,0 +1,42 @@
+.card-expandable{
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.603);
+    border-top: 2px black solid;
+    border-left: 2px black solid;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    h3{
+        height: 100%;
+        margin: 0px;
+        width: fit-content;
+        text-align: left;
+    }
+
+    .hide{
+        height: 0px;
+        visibility: collapse;
+        p{
+            margin: 0px;
+        }
+    }
+    .expand{
+        p{
+            margin: 1rem 0px;
+            height: 100%;
+            text-align: left;
+        }
+    }
+
+
+    
+}

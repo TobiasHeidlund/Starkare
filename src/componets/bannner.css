@@ -1,0 +1,11 @@
+.banner{
+    display: block;
+    background-color: var(--green);
+    color: white;
+    margin: 0px;
+    padding: .5rem;
+    cursor: pointer;
+}
+.banner:hover{
+    color: white;
+}

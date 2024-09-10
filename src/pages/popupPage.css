@@ -1,0 +1,11 @@
+.popup-page{
+    position: fixed;
+    background-color: rgb(128, 128, 128, .6);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}

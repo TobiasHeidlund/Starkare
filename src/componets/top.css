@@ -1,0 +1,30 @@
+.header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header li{
+    float: left;
+    padding: 0rem 1rem;
+}
+.header{
+    position: fixed;
+    z-index: 100;
+    div{
+        display: flex;
+        background-color: white;
+        color: black;
+        justify-content: space-evenly;
+        width: 1000px;
+        border-bottom: solid 2px black;
+        border-right: solid 6px white;
+    }
+}
+.header a{
+    color: black;
+}
+.header img{
+    width: 8rem;
+    margin: 0.5rem;
+}
