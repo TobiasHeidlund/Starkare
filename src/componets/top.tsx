@@ -27,9 +27,9 @@ function header({bannerText}:Props) {
     <Banner bannerText={bannerText}/>
     <div className='container'>
     <div className='flex'>
-        <Link to='/#splash'><img src={logo} /></Link>
+        <Link to='/#home'><img src={logo} /></Link>
         <ul className='list'>
-            <li><Link to='/#splash'>HEM</Link></li>
+            <li><Link to='/#home'>HEM</Link></li>
             <li><Link to='/#cards'>VÅRA TJÄNSTER</Link></li>
             <li><Link to='/#faq'>VANLIGA FRÅGOR</Link></li>
             <li><Link to='/#schema'>SCHEMA</Link></li>

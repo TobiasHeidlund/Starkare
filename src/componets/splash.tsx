@@ -16,6 +16,7 @@ function Splash({setPopup}:Props) {
   },[])
   return (
     <section id="splash" className="splash">
+        <div id='home'className="anchorbig"></div>
         <div className="centered">
         <h1>Kom i Form, Bli Stark & Må Bra</h1>
         <h3>Vi hjälper dig komma igång</h3>

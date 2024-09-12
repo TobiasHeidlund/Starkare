@@ -23,7 +23,10 @@ function App() {
   const darkMode = ()=>{
     setDarkmode(count=> !count)
   }
-
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    (document.getRootNode().lastChild?.lastChild as HTMLBodyElement).classList.add("dark")
+  }
+  
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
