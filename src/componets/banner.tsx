@@ -7,7 +7,12 @@ type Props = {
 
 function banner({bannerText}:Props) {
   return (
-    <Link to="/bootcamp#bootcamp" className='banner'><b>{bannerText}</b></Link>
+    <div className='bannercontainer'>
+      <div className="bannerflex">
+          <Link to="/bootcamp#bootcamp" className='banner'><b>{bannerText}</b></Link>
+        </div>
+    </div>
+    
   )
 }
 

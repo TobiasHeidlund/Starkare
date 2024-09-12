@@ -1,6 +1,6 @@
 .cardBox {
-    background-color: white;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--text-color);;
     padding: 1rem;
     border-radius: 6px;
     margin: 1rem;

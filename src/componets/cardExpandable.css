@@ -2,13 +2,13 @@
     box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.603);
     border-top: 2px black solid;
     border-left: 2px black solid;
-    background-color: white;
-    color: black;
+    background-color: var(--primary-color);
     border-radius: 1rem;
     padding: 1rem;
     cursor: pointer;
     user-select: none;
     margin-bottom: 15px;
+    margin-right: 5px;
     .title{
         display: flex;
         justify-content: space-between;

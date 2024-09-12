@@ -9,20 +9,29 @@
     padding: 0rem 1rem;
 }
 .header{
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 100;
-    div{
+    min-width: 100%;
+    overflow-y: hidden;
+    background-color: var(--background-color);
+    .container{
         display: flex;
-        background-color: white;
-        color: black;
+        justify-content: center;
+    }
+    .flex{
+        flex-grow: 2;
+        max-width: 1200px;
+        display: flex;
+        background-color: var(--background-color);
+        color: var(--text-color);
         justify-content: space-evenly;
-        width: 1000px;
-        border-bottom: solid 2px black;
-        border-right: solid 6px white;
+        border-bottom: solid 2px var(--text-color);
+        border-right: solid 6px var(--background-color);
     }
 }
-.header a{
-    color: black;
+.header .container a{
+    color: var(--text-color);
 }
 .header img{
     width: 8rem;

@@ -1,7 +1,9 @@
-#root {
-  max-width: 1000px;
+#myroot {
+  max-width: 1200px;
+  min-width: 850px;
   margin: 0 auto;
   text-align: center;
+  background-color: var(--background-color);
 }
 
 .app-wrapper{
@@ -18,4 +20,16 @@
   position: relative;
   top: -130px;
   visibility: hidden;
+}
+#root {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+body{
+  margin: 0;
+  background-color: var(--background-color);
 }

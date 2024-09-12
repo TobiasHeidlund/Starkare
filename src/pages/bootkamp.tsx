@@ -52,7 +52,7 @@ function bootkamp(prop:Props) {
                 <li>Plats: {prop.content.place}</li>
             </ul>
             <h3>Vi kommer höra av oss till dig så fort vi kan för att bekräfta din bokning. Vi ser fram emot att träffa dig!</h3>
-            <p>Betalning sker via faktura 30 dagar. Det går bra att använda sig av friskvård. för avbokning krävs uppvisande läkarintyg.</p>
+            <p className='lowtrans'> Betalning sker via faktura 30 dagar. Det går bra att använda sig av friskvård. för avbokning krävs uppvisande läkarintyg.</p>
             <form action="">
                 <input type="text" name="name" id="name" placeholder='Namn *' required/>
                 <input type="email" name="email" id="epost" placeholder='E-post *' required />

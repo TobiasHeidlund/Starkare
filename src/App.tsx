@@ -4,7 +4,7 @@ import './App.css'
 import Home from './pages/home'
 import Top from './componets/top'
 import Bootkamp from './pages/bootkamp'
-import Banner from './componets/banner';
+import HomeImage from './componets/homeImage';
 import ScrollToAnchor from './componets/ScrollToAnchor';
 function App() {
   var prop = {
@@ -18,16 +18,22 @@ function App() {
     place: "Starkare CrossFit, Analysvägen 7A Mölnlycke företagspark",
     timeofyear: "hösten"
   }
+  const [dakmode, setDarkmode] = useState(false)
+
+  const darkMode = ()=>{
+    setDarkmode(count=> !count)
+  }
 
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
-    <div className='app-wrapper'>
-      <Top bannerText={prop.bannerText}/>
-      
+    <Top bannerText={prop.bannerText}/>
+    <HomeImage/>
+    <div id='myroot'>
       <Routes>
         <Route path="/" element={<Home/>}> </Route>
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
+        <Route path="/dark" element={ <Home/>} />
       </Routes>
     
     </div>

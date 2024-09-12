@@ -1,4 +1,6 @@
 div .bootcamp{
+    color: var(--text-color);
+
     .margin0bottom{
         margin-bottom: 0px;
     }
@@ -16,14 +18,22 @@ div .bootcamp{
         .centered{
             width: 60%;
         }
-        color: var(--green);
-        border: solid 5px black;
+        color: white;
+        -webkit-text-stroke: 2px black;
+        font-stretch: expanded;
     }
     .body{
-        color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
+        p{
+            max-width: 900px;
+           
+        }
+        .lowtrans{
+            filter: brightness(65%);
+            font-size: small;
+        }
         .list{
             margin-top: 0;
             display: flex;
