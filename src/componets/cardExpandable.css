@@ -9,6 +9,7 @@
     user-select: none;
     margin-bottom: 15px;
     margin-right: 5px;
+    color: var(--text-color);
     .title{
         display: flex;
         justify-content: space-between;
