@@ -12,7 +12,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    min-width: 100%;
+    width: 100%;
     overflow-y: hidden;
     background-color: var(--background-color);
     .container{
@@ -25,7 +25,6 @@
         display: flex;
         background-color: var(--background-color);
         color: var(--text-color);
-        justify-content: space-evenly;
         border-bottom: solid 2px var(--text-color);
         border-right: solid 6px var(--background-color);
     }
@@ -36,4 +35,28 @@
 .header img{
     width: 8rem;
     margin: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+    .header{
+        ul{
+            display: none;
+        }
+    }
+    .flex{
+        justify-content: space-between;
+        padding: 0px 20px;
+        align-items: center;
+    }
+    .expand{
+        box-sizing: 50px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .expand{
+        display: none;
+        visibility: hidden;
+    }
+    .flex{
+        justify-content: space-evenly;
+    }
 }

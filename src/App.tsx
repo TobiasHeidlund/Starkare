@@ -6,6 +6,7 @@ import Top from './componets/top'
 import Bootkamp from './pages/bootkamp'
 import HomeImage from './componets/homeImage';
 import ScrollToAnchor from './componets/ScrollToAnchor';
+import Rehab from './pages/rehab';
 function App() {
   var prop = {
     active:true,
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<Home/>}> </Route>
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
         <Route path="/dark" element={ <Home/>} />
+        <Route path="/rehab" element={ <Rehab/>} />
       </Routes>
     
     </div>

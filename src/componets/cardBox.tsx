@@ -3,14 +3,15 @@ import './cardBox.css'
 
 type Props = {
     title:String,
-    text:String
+    text:String,
+    boxname:string
 }
 
 
 
-function cardBox({title, text}:Props) {
+function cardBox({title, text, boxname}:Props) {
   return (
-    <div className='cardBox'>
+    <div className={boxname}>
         <h2>{title}</h2>
         <p>{text}</p>
     </div>
