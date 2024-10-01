@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
+import logoW from '../assets/slogan-starkare-logo-white.png';
 import './top.css'
 import Banner from './banner';
 import {Link} from 'react-router-dom'
@@ -7,9 +8,10 @@ import { Contrast, Menu } from '@mui/icons-material';
 type Props={
   bannerText:String;
   menu: ()=>void;
+  darkmode: Boolean;
 }
 
-function header({bannerText, menu}:Props) {
+function header({bannerText, menu, darkmode}:Props) {
   var click = ()=>{
     var element = document.getRootNode().lastChild?.lastChild as HTMLBodyElement;
     console.log(element)
@@ -30,7 +32,10 @@ function header({bannerText, menu}:Props) {
     <Banner bannerText={bannerText}/>
     <div className='container'>
     <div className='flex'>
-        <Link to='/#home'><img src={logo} /></Link>
+        <Link to='/#home'>
+        <img src={logoW} className="imageLight"/>
+        <img src={logo} className="imageDark"/>
+        </Link>
         <ul className='list'>
             <li><Link to='/#home'>HEM</Link></li>
             <li><Link to='/rehab#rehab'>REHAB</Link></li>

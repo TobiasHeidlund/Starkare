@@ -29,7 +29,31 @@
         
         border-right: solid 6px var(--background-color);
     }
+   
 }
+
+.dark{
+    .flex{
+        .imageDark{
+            display: none;
+        }
+        .imageLight{
+            display: block;
+        }
+    }
+}
+.light{
+    .flex{
+        .imageDark{
+            display: block;
+        }
+        .imageLight{
+            display: none;
+        }
+    }
+}
+
+
 .header .container a{
     color: var(--text-color);
 }
