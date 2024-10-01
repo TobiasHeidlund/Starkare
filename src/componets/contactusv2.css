@@ -120,6 +120,9 @@
         height: 3rem;
         width: 3rem;
     }
+    .copyright{
+        font-size: x-small;
+    }
 }
 @media screen and (max-width: 800px) {
    .contactus{
