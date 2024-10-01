@@ -19,13 +19,14 @@
         display: flex;
         justify-content: center;
     }
+    border-bottom: solid 2px var(--text-color);
     .flex{
         flex-grow: 2;
         max-width: 1200px;
         display: flex;
         background-color: var(--background-color);
         color: var(--text-color);
-        border-bottom: solid 2px var(--text-color);
+        
         border-right: solid 6px var(--background-color);
     }
 }
@@ -47,16 +48,19 @@
         padding: 0px 20px;
         align-items: center;
     }
+    .flex{
     .expand{
         box-sizing: 50px;
     }
 }
+}
 @media screen and (min-width: 900px) {
-    .expand{
-        display: none;
-        visibility: hidden;
-    }
+    
     .flex{
         justify-content: space-evenly;
+        .expand{
+            display: none;
+            visibility: hidden;
+        }
     }
 }

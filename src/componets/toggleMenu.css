@@ -1,0 +1,46 @@
+.toggleMenu{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    top: 162px;
+    z-index: 1000;
+    
+
+    .toggleMenuList{
+        position: absolute;
+        width: 15rem;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background-color: var(--background-color);
+        margin: 0;
+        padding-left: 0;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        flex-direction: column;
+    }
+    li{
+        padding-top: 1rem;
+        height: 3rem;
+        a{
+            color: var(--text-color);
+        }
+        
+    }
+    button{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        z-index: 500;
+    }
+}
+.toggleMenuHidden{
+    visibility: collapse;
+    display: none;
+}

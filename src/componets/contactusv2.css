@@ -55,6 +55,7 @@
         }
     .row2{
         display: flex;
+        flex-wrap: wrap;
         grid-template-columns: auto;
         grid-template-areas: "side mid mid side";
         justify-content: center;
@@ -119,4 +120,17 @@
         height: 3rem;
         width: 3rem;
     }
+}
+@media screen and (max-width: 800px) {
+   .contactus{
+     .row2{
+        .side{
+            order: 2;
+            flex-basis:26% ;
+        }
+        .mid{
+           flex-basis: 60%;
+        }
+     }
+   }
 }

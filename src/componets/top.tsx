@@ -6,9 +6,10 @@ import {Link} from 'react-router-dom'
 import { Contrast, Menu } from '@mui/icons-material';
 type Props={
   bannerText:String;
+  menu: ()=>void;
 }
 
-function header({bannerText}:Props) {
+function header({bannerText, menu}:Props) {
   var click = ()=>{
     var element = document.getRootNode().lastChild?.lastChild as HTMLBodyElement;
     console.log(element)
@@ -39,9 +40,10 @@ function header({bannerText}:Props) {
             <li><Link to='/#contactus'>KONTAKTA OSS</Link></li>
             <li onClick={click}><Contrast/></li>
         </ul>
-        <Menu className='expand' onClick={onMenu}/>
+        <Menu className='expand' onClick={menu}/>
     </div>
     </div>
+
     </header>
   
   )

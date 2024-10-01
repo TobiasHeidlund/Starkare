@@ -1,9 +1,11 @@
 .banner{
-    display: block;
     color: white;
     margin: 0px;
     padding: .5rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .banner:hover{
     color: white;
@@ -14,4 +16,9 @@
 .bannerflex{
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width: 900px) {
+    .banner{
+        height: 3rem;
+    }
 }

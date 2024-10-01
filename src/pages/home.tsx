@@ -4,25 +4,19 @@ import Reviews from '../pages/reviews'
 import Schema from '../componets/schema'
 import Splash from '../componets/splash'
 import PopupPage from '../pages/popupPage'
-import Contactusv2 from '../componets/contactusv2'
+
 import Services from '../componets/services'
 import './home.css'
 
+type Props = {
+  count: boolean
+  switchViewable: ()=>void
+  shouldHaveDescription: boolean;
+}
 
 
+function home({count,switchViewable,shouldHaveDescription}:Props) {
 
-function home() {
-  const [count, setCount] = useState(false)
-  const [shouldHaveDescription, setshouldHaveDescription] = useState(false)
-
-  const switchViewable = ()=>{
-    setCount(count=> !count)
-    setshouldHaveDescription(false)
-  }
-  const switchViewabledesc = ()=>{
-    setCount(count=> !count)
-    setshouldHaveDescription(true)
-  }
 
 
   return (
@@ -34,7 +28,7 @@ function home() {
       <Faq/>
       <Reviews/>
       <Schema/>
-      <Contactusv2 setPopup={switchViewabledesc}/>
+      
       </div>
     </div>
   )

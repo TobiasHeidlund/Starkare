@@ -39,11 +39,30 @@ div .rehab{
         flex-direction: column;
         align-items: center;
         .section2{
-            background-image: url("../assets/rehabb2.jpg");
+            background-image: url("../assets/rehabb1.jpg");
             background-size: cover;
             background-position-x: center;
             width: 100%;
             aspect-ratio: 2/1;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .space{
+                flex-grow: .75;
+            }
+            button{
+                width: 500px;
+                height: 3rem;
+                position: relative;
+                background-color: white;
+                color: black;
+                float: end;
+                bottom: 0;
+                
+            }
+
         }
         .cardContaienr{
             display: flex;
@@ -83,29 +102,18 @@ div .rehab{
             }
         }
 
-        form{
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            input{
-                background-color: ghostwhite;
-                color: black;
-                margin: .5rem;
-                height: 3rem;
-                border-radius: 10px;
-                border: solid 2px black;
-                padding-left: 1rem;
-            }
-            textarea{
-                padding-left: 1rem;
-                background-color: ghostwhite;
-                color: black;
-                border: solid 2px black;
-                padding-top: 1rem;
-                margin: .5rem;
-                height: 2rem;
-                border-radius: 10px;
-            }
+        button{
+            max-width: 75%;
+            width: 500px;
+            height: 4rem;
+            position: relative;
+            background-color: white;
+            color: black;
+            border-radius: 5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 2px 2px 16px black;
+            
         }
     }
 }

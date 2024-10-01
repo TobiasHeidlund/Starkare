@@ -22,6 +22,7 @@ type Props = {
 function bootkamp(prop:Props) {
   return (
     <div  className='bootcamp'>
+        
         <div className="anchorbig" id="bootcamp"></div>
         <section className='head'>
             <h1>Bootcamp start {prop.content.date}</h1>

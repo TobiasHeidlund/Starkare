@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import './App.css'
 import Home from './pages/home'
 import Top from './componets/top'
@@ -7,6 +7,9 @@ import Bootkamp from './pages/bootkamp'
 import HomeImage from './componets/homeImage';
 import ScrollToAnchor from './componets/ScrollToAnchor';
 import Rehab from './pages/rehab';
+import Togglemenu from './componets/togglemenu';
+import Contactusv2 from './componets/contactusv2'
+import PopupPage from './pages/popupPage';
 function App() {
   var prop = {
     active:true,
@@ -20,27 +23,51 @@ function App() {
     timeofyear: "hösten"
   }
   const [dakmode, setDarkmode] = useState(false)
+  const [menu, setMenu] = useState(false)
+  const toggleMenu = ()=>{
+    setMenu(cout => !cout)
+  }
+
 
   const darkMode = ()=>{
     setDarkmode(count=> !count)
   }
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    (document.getRootNode().lastChild?.lastChild as HTMLBodyElement).classList.add("dark")
+
+  useEffect(()=>{
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      (document.getRootNode().lastChild?.lastChild as HTMLBodyElement).classList.add("dark")
+    }
+  },[])
+  
+
+  const [count, setCount] = useState(false)
+  const [shouldHaveDescription, setshouldHaveDescription] = useState(false)
+
+  const switchViewable = ()=>{
+    setCount(count=> !count)
+    setshouldHaveDescription(false)
   }
+  const switchViewabledesc = ()=>{
+    setCount(count=> !count)
+    setshouldHaveDescription(true)
+  }
+
   
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
-    <Top bannerText={prop.bannerText}/>
+    <Top bannerText={prop.bannerText} menu={toggleMenu}/>
+    <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
     <HomeImage/>
     <div id='myroot'>
+      <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} />
       <Routes>
-        <Route path="/" element={<Home/>}> </Route>
+        <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>}> </Route>
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
-        <Route path="/dark" element={ <Home/>} />
-        <Route path="/rehab" element={ <Rehab/>} />
+        <Route path="/dark" element={ <Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
+        <Route path="/rehab" element={ <Rehab setPopup={switchViewable}/>} />
       </Routes>
-    
+      <Contactusv2 setPopup={switchViewabledesc}/>
     </div>
     </BrowserRouter>
   )

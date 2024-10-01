@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 2;
     margin-bottom: 280px;
     margin-top: 50px;
     
@@ -21,11 +22,18 @@
     }
     
 }
-@media screen and (max-width: 700px) {
-  
-}
 @media screen and (min-width: 700px) {
     .splash{
+        .centered{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-height: 800px) {
+    .splash{
+        height: 600px;
+        aspect-ratio: 0;
         .centered{
             width: 60%;
         }

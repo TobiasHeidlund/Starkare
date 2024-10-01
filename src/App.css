@@ -44,6 +44,7 @@
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
+  
 }
 body{
   margin: 0;
