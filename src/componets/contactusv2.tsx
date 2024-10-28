@@ -10,7 +10,7 @@ import { LiveHelp } from '@mui/icons-material';
 
 
 type Props = {
-    setPopup: ()=>void
+    setPopup: (s:string)=>void
 } 
 function contactus({setPopup}:Props) {
   return (
@@ -26,7 +26,7 @@ function contactus({setPopup}:Props) {
                     <EmailIcon/>
                     <p>starkare@starkarecrossfit.se</p>
             </a>
-            <a className='side' onClick={setPopup}>
+            <a className='side' onClick={()=>{setPopup("Fråga")}}>
                     <LiveHelp/>
                     <p>Frågor</p>
             </a>

@@ -10,8 +10,9 @@ import Rehab from './pages/rehab';
 import Togglemenu from './componets/togglemenu';
 import Contactusv2 from './componets/contactusv2'
 import PopupPage from './pages/popupPage';
+import prop from '../bootcamp.json'
 function App() {
-  var prop = {
+ /* var prop = {
     active:true,
     bannerText: 'Tryck här för mer info kring Bootcamp "otränad" start oktober 2024!',
     date :"oktober 2024",
@@ -21,7 +22,7 @@ function App() {
     price2: "Early bird pris (boka innan 15/9): 3200kr/person",
     place: "Starkare CrossFit, Analysvägen 7A Mölnlycke företagspark",
     timeofyear: "hösten"
-  }
+  }*/
   const [dakmode, setDarkmode] = useState(false)
   const [menu, setMenu] = useState(false)
   const toggleMenu = ()=>{
@@ -42,14 +43,16 @@ function App() {
 
   const [count, setCount] = useState(false)
   const [shouldHaveDescription, setshouldHaveDescription] = useState(false)
-
-  const switchViewable = ()=>{
+  const [context, setContext] = useState("")
+  const switchViewable = (lcontext:string)=>{
     setCount(count=> !count)
+    setContext(lcontext)
     setshouldHaveDescription(false)
   }
-  const switchViewabledesc = ()=>{
+  const switchViewabledesc = (lcontext:string)=>{
     setCount(count=> !count)
     setshouldHaveDescription(true)
+    setContext(lcontext)
   }
 
   
@@ -60,7 +63,7 @@ function App() {
     <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
     <HomeImage/>
     <div id='myroot'>
-      <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} />
+      <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} context={context} />
       <Routes>
         <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>}> </Route>
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />

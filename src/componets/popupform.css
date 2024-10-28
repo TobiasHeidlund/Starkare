@@ -46,3 +46,8 @@
 
     
 }
+.form-section{
+    .form-hidden{
+        display:none;
+    }
+}
