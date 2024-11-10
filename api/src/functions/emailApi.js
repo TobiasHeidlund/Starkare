@@ -1,8 +1,6 @@
 const { app } = require('@azure/functions');
 const nodemailer = require("nodemailer");
 require('dotenv').config();
-const cors = require('cors');
-app.use(cors());
 app.http('emailApi', {
     methods: ['POST'],
     authLevel: 'anonymous',
