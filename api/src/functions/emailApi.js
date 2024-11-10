@@ -1,24 +1,34 @@
-const { app } = require('@azure/functions');
+const { app, HttpResponse  } = require('@azure/functions');
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 app.http('emailApi', {
     methods: ['POST'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
-        context.log(`Http function processed request for url "${request.url}"`);
+      context.log(`Http function processed request for url "${request.url}"`);
+      context.log(`Http function processed request body: "${JSON.stringify(request.body)}"`);
 
-       
-        main(request.body).then(()=>{
-           const response = new HttpResponse({ body: `` });
-           return response
-        }).catch(e =>{
-            const response = new HttpResponse({ body: e });
-            context.log(`THIS WENT WRONG:`);
-            context.log(e);
-            response.status = 501
-            response.body.set 
-            return response;
-        });
+      try {
+          // Call the main function to send the email
+          await main(request.body);
+
+          // Return a success response
+          const response = new HttpResponse({
+              status: 200,
+              body: "Email sent successfully."
+          });
+          return response;
+      } catch (e) {
+          // Log the error and return a failure response
+          context.log("Error occurred while sending email:");
+          context.log(e);
+
+          const response = new HttpResponse({
+              status: 500,
+              body: `Failed to send email: ${e.message}`
+          });
+          return response;
+      }
     }
 });
 
