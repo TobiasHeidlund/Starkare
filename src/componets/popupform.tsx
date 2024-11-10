@@ -27,14 +27,15 @@ function popupform({shouldHaveDescription,context}:Props) {
     
     console.log(formData)
     //MAKE SURE THAT THE USER UNDERSTAD THAT IS DOES NOT WORK
-    axios.post(apiUrl,formData).then((res) =>{
+    axios.post('/api/emailApi',formData).then((res) =>{
       if(res.status == 200){
         setSubmitted(true);
+        console.log("SUBMITED WITH STATUS 200")
       }else{
         alert("Något gick fel vänligen försök igen")
       }
-
-
+      console.log("SUBMITED WITH STATUS")
+      console.log(res.status)
 
       setFormData({ name: '', email: '', phone: '', comment: '', fcontext: '' });
     }).catch(error => {
