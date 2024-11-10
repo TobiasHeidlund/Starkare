@@ -6,8 +6,33 @@ app.http('emailApi', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
 
-        const name = request.query.get('name') || await request.text() || 'world';
+        main(request.body).then(()=>{
 
-        return { body: `Hello, ${name}!` };
+        });
     }
 });
+
+
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  host: "smtp.ethereal.email",
+  port: 587,
+  secure: false, // true for port 465, false for other ports
+  auth: {
+    user: "abdul.schoen@ethereal.email",
+    pass: "em1mTfY83D8SHZ38Hm",
+  },
+});
+
+// async..await is not allowed in global scope, must use a wrapper
+async function main(msg) {
+  // send mail with defined transport object
+  const info = await transporter.sendMail({
+    from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
+    to: "tobias199@gmail.com, tobias199@gmail.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: JSON.stringify(msg), // plain text body
+  });
+  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+}
