@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './popupform.css'
 import logo from '../assets/logo.png';
 import axios from 'axios';
+import CircularProgress from '@mui/material/CircularProgress';
 
 type Props = {
   shouldHaveDescription:Boolean,
@@ -19,27 +20,25 @@ function popupform({shouldHaveDescription,context}:Props) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const apiUrl = import.meta.env.VITE_BACKENDURL;
  
   //<!--<input type={shouldHaveDescription? "text":"hidden"} name='descrip' id="descri" placeholder='Message'/>>
   function submitForm(formData2: React.FormEvent<HTMLFormElement>) {
     formData2.preventDefault()
-    
-    console.log(formData)
+    setLoading(true)
     //MAKE SURE THAT THE USER UNDERSTAD THAT IS DOES NOT WORK
     axios.post('/api/emailApi',formData).then((res) =>{
       if(res.status == 200){
         setSubmitted(true);
-        console.log("SUBMITED WITH STATUS 200")
       }else{
         alert("Något gick fel vänligen försök igen")
+        setFormData({ name: '', email: '', phone: '', comment: '', fcontext: '' });
       }
-      console.log("SUBMITED WITH STATUS")
-      console.log(res.status)
-
-      setFormData({ name: '', email: '', phone: '', comment: '', fcontext: '' });
+      setLoading(false)
     }).catch(error => {
       console.log(error)
+      setLoading(false)
       alert("Något gick fel vänligen försök igen")
     })
 
@@ -80,31 +79,34 @@ function popupform({shouldHaveDescription,context}:Props) {
       
         <form onSubmit={submitForm} >
             <img src={logo}/>
-            <p className={submitted?'form-hidden':''}>{!shouldHaveDescription?"Fyll i din information för att komma igång":"Väligen fyll i formuläret så återkommer vi" }</p>
+            <p className={(submitted||loading)?'form-hidden':''}>{!shouldHaveDescription?"Fyll i din information för att komma igång":"Väligen fyll i formuläret så återkommer vi" }</p>
             <input type="text" name="name" id="name" placeholder='Namn *' required value={formData.name} // Controlled component
-            className={submitted?'form-hidden':''}
+            className={(submitted||loading)?'form-hidden':''}
                 onChange={handleChange} // Handle changes
                 autoComplete='name'
                 />
             <input type="email" name="email" id="epost" placeholder='E-post *' required  value={formData.email} // Controlled component
                 onChange={handleChange} // Handle changes
                 autoComplete='email'
-                className={submitted?'form-hidden':''}
+                className={(submitted||loading)?'form-hidden':''}
                 />
             <input type={shouldHaveDescription? "hidden":'tel'} name="phone" id="tele" placeholder='Telefonnummer *' required  value={formData.phone} // Controlled component
                 onChange={handleChange} // Handle changes
                 autoComplete='tel'
-                className={submitted?'form-hidden':''}
+                className={(submitted||loading)?'form-hidden':''}
                 
                 />
             <textarea id="comment" name='comment' hidden={shouldHaveDescription?false:true} value={formData.comment} // Controlled component
                 onChange={handleChange} // Handle changes
-                className={submitted?'form-hidden':''}
+                className={(submitted||loading)?'form-hidden':''}
                 ></textarea>
-            <input className={submitted?'form-hidden':'submit'} type="submit" value="Kontakta oss" />
-            <div className={submitted?'':'form-hidden'}>
+            <input className={(submitted||loading)?'form-hidden':'submit'} type="submit" value="Kontakta oss" />
+            <div className={(submitted && !loading)?'':'form-hidden'}>
             <h2>Välkommen till Starkare</h2>
             <p>Vi kommer att ta kontakt med dig så snart som möjligt för att komma igång</p>
+            </div>
+            <div className={(!submitted && loading)?'':'form-hidden'}>
+                <CircularProgress />
             </div>
         </form>
         

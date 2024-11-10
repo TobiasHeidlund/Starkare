@@ -8,6 +8,9 @@
     background-color: var(--green);
     padding: 2rem;
     border-radius: 1rem;
+    p{
+        color: white;
+    }
 }
 .form-section input{
     height: 2rem;
