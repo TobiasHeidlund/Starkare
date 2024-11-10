@@ -1,4 +1,6 @@
 const { app } = require('@azure/functions');
+const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 app.http('emailApi', {
     methods: ['POST'],
@@ -11,9 +13,6 @@ app.http('emailApi', {
         });
     }
 });
-
-
-const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
   host: "smtp.ethereal.email",
