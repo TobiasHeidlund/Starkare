@@ -8,13 +8,16 @@ app.http('emailApi', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
 
-        const response = new HttpResponse({ body: `` });
+       
         main(request.body).then(()=>{
+           const response = new HttpResponse({ body: `` });
            return response
         }).catch(e =>{
+            const response = new HttpResponse({ body: e });
             context.log(`THIS WENT WRONG:`);
             context.log(e);
             response.status = 501
+            response.body.set 
             return response;
         });
     }
