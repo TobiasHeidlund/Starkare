@@ -12,6 +12,7 @@ app.http('emailApi', {
         main(request.body).then(()=>{
            return response
         }).catch(e =>{
+            context.log(`THIS WENT WRONG:`);
             context.log(e);
             response.status = 500
             return response;
