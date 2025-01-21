@@ -1,5 +1,10 @@
 const { app, HttpResponse  } = require('@azure/functions');
-const nodemailer = require("nodemailer");
+const { EmailClient } = require("@azure/communication-email");
+
+const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
+const client = new EmailClient(connectionString);
+
+
 require('dotenv').config();
 app.http('emailApi', {
     methods: ['POST'],
@@ -32,24 +37,42 @@ app.http('emailApi', {
     }
 });
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.ethereal.email",
-  port: 587,
-  secure: false, // true for port 465, false for other ports
-  auth: {
-    user: "abdul.schoen@ethereal.email",
-    pass: "em1mTfY83D8SHZ38Hm",
-  },
-});
+
 
 // async..await is not allowed in global scope, must use a wrapper
 async function main(msg) {
-  // send mail with defined transport object
-  const info = await transporter.sendMail({
-    from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
-    to: "tobias199@gmail.com, tobias199@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: JSON.stringify(msg), // plain text body
-  });
-  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+  const emailMessage = {
+    senderAddress: "DoNotReply@a8c08042-a6a8-4488-816e-11a140e08d95.azurecomm.net",
+    content: {
+        subject: "Test Email",
+        plainText: JSON.stringify(msg),
+    },
+    recipients: {
+        to: [{ address: "tobias199@gmail.com" }],
+    },
+  };
+  const poller = await client.beginSend(emailMessage);
+  if (!poller.getOperationState().isStarted) {
+    throw "Poller was not started."
+  }
+
+  let timeElapsed = 0;
+  while(!poller.isDone()) {
+    poller.poll();
+    console.log("Email send polling in progress");
+
+    await new Promise(resolve => setTimeout(resolve, POLLER_WAIT_TIME * 1000));
+    timeElapsed += 10;
+
+    if(timeElapsed > 18 * POLLER_WAIT_TIME) {
+      throw "Polling timed out.";
+    }
+  }
+
+  if(poller.getResult().status === KnownEmailSendStatus.Succeeded) {
+    console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
+  }
+  else {
+    throw poller.getResult().error;
+  }
 }
