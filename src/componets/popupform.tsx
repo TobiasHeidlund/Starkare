@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './popupform.css'
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-starkare-logo-white.png';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
-
+import {Link} from 'react-router-dom'
 type Props = {
   shouldHaveDescription:Boolean,
   context:String
@@ -100,6 +100,9 @@ function popupform({shouldHaveDescription,context}:Props) {
                 onChange={handleChange} // Handle changes
                 className={(submitted||loading)?'form-hidden':''}
                 ></textarea>
+            <p className={(submitted||loading)?'form-hidden abort':'abort'}>
+              Genom att skicka formuläret godkänner ni våran <Link to='/GDPR-POLICY'>GDPR policy</Link>
+            </p>
             <input className={(submitted||loading)?'form-hidden':'submit'} type="submit" value="Kontakta oss" />
             <div className={(submitted && !loading)?'':'form-hidden'}>
             <h2>Välkommen till Starkare</h2>

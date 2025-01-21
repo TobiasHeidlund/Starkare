@@ -11,6 +11,9 @@
     p{
         color: white;
     }
+    h2{
+        color: white;
+    }
 }
 .form-section input{
     height: 2rem;

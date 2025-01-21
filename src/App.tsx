@@ -11,6 +11,7 @@ import Togglemenu from './componets/togglemenu';
 import Contactusv2 from './componets/contactusv2'
 import PopupPage from './pages/popupPage';
 import prop from '../bootcamp.json'
+import Gdpr from './pages/gdpr'
 function App() {
  /* var prop = {
     active:true,
@@ -69,6 +70,7 @@ function App() {
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
         <Route path="/dark" element={ <Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
         <Route path="/rehab" element={ <Rehab setPopup={switchViewable}/>} />
+        <Route path="/gdpr-policy" element={ <Gdpr/>} />
       </Routes>
       <Contactusv2 setPopup={switchViewabledesc}/>
     </div>

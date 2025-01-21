@@ -18,7 +18,9 @@ function cardExpandable({title,text}:Props) {
             <AddIcon/>
         </div>
         <div className={count == 0?"hide":"expand"}>
-        <p>{text}</p>
+        {text.split('\n').map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
         </div>
     </div>
   )

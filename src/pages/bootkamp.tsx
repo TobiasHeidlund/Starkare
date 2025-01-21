@@ -3,6 +3,7 @@ import axios, { Axios } from 'axios';
 import './bootkamp.css'
 import b3 from '../assets/b3.jpg';
 import Popupform from '../componets/popupform'
+import {Link} from 'react-router-dom'
 
 type Props = {
     content:{
@@ -143,6 +144,7 @@ function bootkamp(prop:Props) {
         value={formData.quest}
         onChange={handleChange}
       ></textarea>
+      Genom att skicka formuläret godkänner ni våran <Link to='/GDPR-POLICY'>GDPR policy</Link>
       <input className="submit" type="submit" value="Skicka" />
     </form>
     <div className={submitted?'':'form-hidden'}>

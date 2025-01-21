@@ -13,7 +13,9 @@ function cardBox({title, text, boxname}:Props) {
   return (
     <div className={boxname}>
         <h2>{title}</h2>
-        <p>{text}</p>
+        {text.split('\n').map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
     </div>
   )
 }
