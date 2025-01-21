@@ -4,7 +4,6 @@ const { EmailClient } = require("@azure/communication-email");
 const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
 const client = new EmailClient(connectionString);
 
-
 require('dotenv').config();
 app.http('emailApi', {
     methods: ['POST'],
