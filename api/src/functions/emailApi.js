@@ -1,6 +1,5 @@
 const { app, HttpResponse  } = require('@azure/functions');
 const { EmailClient } = require("@azure/communication-email");
-
 const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
 if (!connectionString) {
     throw new Error("Environment variable for 'COMMUNICATION_SERVICES_CONNECTION_STRING' is missing.");
@@ -14,11 +13,6 @@ app.http('emailApi', {
     handler: async (request, context) => {
       context.log(`Http function processed request for url "${request.url}"`);
       context.log(`Http function processed request body: "${JSON.stringify(request.body)}"`);
-      const response = new HttpResponse({
-        status: 200,
-        body: "Email sent successfully."
-    });
-    return response;
       try {
           // Call the main function to send the email
           await main(request.body);
