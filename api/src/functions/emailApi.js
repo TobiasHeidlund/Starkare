@@ -34,7 +34,23 @@ app.http('emailApi', {
             // Log the error and return a failure response
             context.log("Error occurred while sending email:");
             context.log(e);
+            // Return a success response
+            const response = new HttpResponse({
+                status: 200,
+                body: "Email sent successfully."
+            });
+            return response;
+        } catch (e) {
+            // Log the error and return a failure response
+            context.log("Error occurred while sending email:");
+            context.log(e);
 
+            const response = new HttpResponse({
+                status: 500,
+                body: `Failed to send email: ${e.message}`
+            });
+            return response;
+        }
             const response = new HttpResponse({
                 status: 500,
                 body: `Failed to send email: ${e.message}`
@@ -66,7 +82,13 @@ async function main(msg) {
     while (!poller.isDone()) {
         poller.poll();
         console.log("Email send polling in progress");
+    let timeElapsed = 0;
+    while (!poller.isDone()) {
+        poller.poll();
+        console.log("Email send polling in progress");
 
+        await new Promise(resolve => setTimeout(resolve, POLLER_WAIT_TIME * 1000));
+        timeElapsed += POLLER_WAIT_TIME;
         await new Promise(resolve => setTimeout(resolve, POLLER_WAIT_TIME * 1000));
         timeElapsed += POLLER_WAIT_TIME;
 
@@ -74,7 +96,16 @@ async function main(msg) {
             throw "Polling timed out.";
         }
     }
+        if (timeElapsed > 18 * POLLER_WAIT_TIME) {
+            throw "Polling timed out.";
+        }
+    }
 
+    if (poller.getResult().status === KnownEmailSendStatus.Succeeded) {
+        console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
+    } else {
+        throw poller.getResult().error;
+    }
     if (poller.getResult().status === KnownEmailSendStatus.Succeeded) {
         console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
     } else {
