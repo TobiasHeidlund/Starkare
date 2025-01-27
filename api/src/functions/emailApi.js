@@ -16,8 +16,8 @@ app.http('emailApi', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
-        const requestjson = await request.json();
         context.log(`Http function processed request body: "${requestBody}"`);
+        const requestjson = await request.json();
         context.log(`Http function processed request json: "${JSON.stringify(requestjson)}"`);
         try {
             // Call the main function to send the email
