@@ -27,8 +27,13 @@ function popupform({shouldHaveDescription,context}:Props) {
   function submitForm(formData2: React.FormEvent<HTMLFormElement>) {
     formData2.preventDefault()
     setLoading(true)
+    console.log(formData)
     //MAKE SURE THAT THE USER UNDERSTAD THAT IS DOES NOT WORK
-    axios.post('/api/emailApi',formData).then((res) =>{
+    axios.post('/api/emailApi',formData, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((res) =>{
       if(res.status == 200){
         setSubmitted(true);
       }else{
