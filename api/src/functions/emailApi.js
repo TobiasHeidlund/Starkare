@@ -2,6 +2,9 @@ const { app, HttpResponse  } = require('@azure/functions');
 const { EmailClient } = require("@azure/communication-email");
 
 const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
+if (!connectionString) {
+    throw new Error("Environment variable for 'COMMUNICATION_SERVICES_CONNECTION_STRING' is missing.");
+}
 const client = new EmailClient(connectionString);
 
 require('dotenv').config();
