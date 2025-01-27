@@ -16,12 +16,10 @@ app.http('emailApi', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
-        context.log(`Http function processed request body: "${requestBody}"`);
-        const requestjson = await request.formData();
-        context.log(`Http function processed request json: "${requestjson}"`);
+        //context.log(`Http function processed request body: "${requestBody}"`);
         try {
             // Call the main function to send the email
-            await main(request);
+            await main(requestBody);
 
             // Return a success response
             const response = new HttpResponse({
@@ -45,8 +43,7 @@ async function main(msg) {
         senderAddress: "DoNotReply@a8c08042-a6a8-4488-816e-11a140e08d95.azurecomm.net",
         content: {
             subject: "Test Email",
-            plainText: JSON.stringify(msg),
-            json: msg
+            plainText: msg,
         },
         recipients: {
             to: [{ address: "tobias199@gmail.com" }],
