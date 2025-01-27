@@ -1,6 +1,5 @@
 const { app, HttpResponse } = require('@azure/functions');
 const { EmailClient, KnownEmailSendStatus } = require("@azure/communication-email");
-const { json } = require('react-router-dom');
 const connectionString = process.env['COMMUNICATION_SERVICES_CONNECTION_STRING'];
 if (!connectionString) {
     throw new Error("Environment variable for 'COMMUNICATION_SERVICES_CONNECTION_STRING' is missing.");
