@@ -33,7 +33,8 @@ function PopupPage({display,switchViewable,shouldHaveDescription,context}:Props 
         if(!parentIsForm){
             switchViewable("no")
         };
-        }}>      
+        }}>   
+        <div className="space"></div>   
         {
         display?<Popupform shouldHaveDescription={shouldHaveDescription} context={context}/>:''
       }</div>

@@ -17,7 +17,9 @@ function faq() {
         />
         <CardExp 
         title="Jag känner mig osäker på att hoppa in i gruppträningen hos er, kan jag få en introduktion?"
-        text="Självklart! Vi rekommenderar starkt alla som inte tränat CrossFit förut att gå någon form av introduktion. Vi har kontinuerligt olika introduktioner i grupp, såsom nybörjarkurser och Bootcamps, men om det inte är något aktuellt just nu så kan du gå en individuell introduktion. Då går du på 3 PT-pass á 60 min för 2500kr (dagtid, vardagar) alternativt 3500kr (helger). "
+        text="Självklart! Vi rekommenderar starkt alla som inte tränat CrossFit förut att gå någon form av introduktion. 
+        Vi har kontinuerligt olika introduktioner i grupp, såsom nybörjarkurser och Bootcamps, men om det inte är något aktuellt just nu så kan du gå en individuell introduktion. 
+        Då går du på 3 PT-pass á 60 min för 2500kr (dagtid, vardagar) alternativt 3500kr (helger). "
         />
         <CardExp 
         title="Hur blir man medlem på Starkare CrossFit?"

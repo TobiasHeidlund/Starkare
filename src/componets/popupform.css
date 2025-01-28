@@ -44,11 +44,10 @@
 }
 .form-section{
     display: flex;
-    width: 1000px;
+    width: min(1000px, 140vw);
     height: fit-content;
     justify-content: center;
     position: fixed;
-    top: 300px;
 
     
 }
