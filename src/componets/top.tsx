@@ -9,9 +9,10 @@ type Props={
   bannerText:String;
   menu: ()=>void;
   darkmode: Boolean;
+  active: Boolean;
 }
 
-function header({bannerText, menu, darkmode}:Props) {
+function header({bannerText, menu, darkmode, active}:Props) {
   var click = ()=>{
     var element = document.getRootNode().lastChild?.lastChild as HTMLBodyElement;
     console.log(element)
@@ -29,7 +30,7 @@ function header({bannerText, menu, darkmode}:Props) {
   
   return (
     <header className='header'>
-    <Banner bannerText={bannerText}/>
+    {active?<Banner bannerText={bannerText}/>:""}
     <div className='container'>
     <div className='flex'>
         <Link to='/#home'>

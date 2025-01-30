@@ -52,6 +52,12 @@ div .rehab{
             .space{
                 flex-grow: .75;
             }
+            h1{
+                font-size:  5rem;
+            }
+            h3{
+                font-size: 1.5rem;
+            }
             button{
                 width: 500px;
                 height: 3rem;
@@ -60,6 +66,7 @@ div .rehab{
                 color: black;
                 float: end;
                 bottom: 0;
+                margin-top: 0;
                 
             }
 

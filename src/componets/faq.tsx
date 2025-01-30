@@ -23,7 +23,7 @@ function faq() {
         />
         <CardExp 
         title="Hur blir man medlem på Starkare CrossFit?"
-        text="Det enklaste sättet att bli medlem på är att fylla i vårat kontaktformulär här på hemsidan, så kontaktar vi dig för att boka ett NSI."
+        text="Det enklaste sättet att bli medlem är att fylla i vårat kontaktformulär för att boka ett möte med oss så hjälper vi dig att komma igång."
         />
         <CardExp 
         title="Kan man få hjälp med kostrådgivning hos er?"
