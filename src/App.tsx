@@ -60,7 +60,7 @@ function App() {
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
-    <Top bannerText={prop.bannerText} menu={toggleMenu} darkmode={dakmode}/>
+    <Top bannerText={prop.bannerText} menu={toggleMenu} darkmode={dakmode} active={prop.active}/>
     <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
     <HomeImage/>
     <div id='myroot'>
