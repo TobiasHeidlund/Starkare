@@ -42,7 +42,7 @@ app.http('emailApi', {
 // async..await is not allowed in global scope, must use a wrapper
 async function main(msg) {
     const emailMessage = {
-        senderAddress: "DoNotReply@a8c08042-a6a8-4488-816e-11a140e08d95.azurecomm.net",
+        senderAddress: "DoNotReply@59c7f365-c213-46a7-9935-397ad4ab7d30.azurecomm.net",
         content: {
             subject: "Test Email",
             plainText: msg,
