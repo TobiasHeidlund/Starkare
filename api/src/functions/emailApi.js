@@ -46,7 +46,7 @@ async function main(msg) {
             plainText: msg,
         },
         recipients: {
-            to: [{ address: "starkare@starkarecrossfit.se" }],
+            to: [{ address: "tobias199@gmail.com" }],
         },
     };
     const poller = await client.beginSend(emailMessage);
