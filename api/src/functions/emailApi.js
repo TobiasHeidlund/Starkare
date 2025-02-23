@@ -14,6 +14,7 @@ app.http('emailApi', {
     methods: ['POST'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
+        start = Date.now();
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
         //context.log(`Http function processed request body: "${requestBody}"`);
@@ -26,6 +27,7 @@ app.http('emailApi', {
                 status: 200,
                 body: "Email sent successfully."
             });
+            context.log(`RequestTook "${Date.now() - start}"ms`);
             return response;
         }  catch (e) {
             const response = new HttpResponse({
