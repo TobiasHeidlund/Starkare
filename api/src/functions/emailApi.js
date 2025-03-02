@@ -20,7 +20,7 @@ app.http('emailApi', {
         //context.log(`Http function processed request body: "${requestBody}"`);
         try {
             // Call the main function to send the email
-            await main(requestBody);
+            main(requestBody);
 
             // Return a success response
             const response = new HttpResponse({
