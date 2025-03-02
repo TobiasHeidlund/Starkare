@@ -30,6 +30,7 @@ app.http('emailApi', {
             context.log(`RequestTook "${Date.now() - start}"ms`);
             return response;
         }  catch (e) {
+            context.error(`Request Failed for "${request.url}"`);
             const response = new HttpResponse({
                 status: 500,
                 body: `Failed to send email: ${e.message}`
@@ -53,6 +54,7 @@ async function main(msg) {
     };
     const poller = await client.beginSend(emailMessage);
     if (!poller.getOperationState().isStarted) {
+        context.error(`Request Failed message "${emailMessage}"`);
         throw "Poller was not started.";
     }
 
@@ -65,6 +67,7 @@ async function main(msg) {
         timeElapsed += POLLER_WAIT_TIME;
 
         if (timeElapsed > 18 * POLLER_WAIT_TIME) {
+            context.error(`Request Failed message "${emailMessage}"`);
             throw "Polling timed out.";
         }
     }
@@ -72,6 +75,7 @@ async function main(msg) {
     if (poller.getResult().status === KnownEmailSendStatus.Succeeded) {
         console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
     } else {
+        context.error(`Request Failed message "${emailMessage}"`);
         throw poller.getResult().error;
     }
 }
