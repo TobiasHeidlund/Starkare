@@ -18,9 +18,9 @@ function contactus({setPopup}:Props) {
         <div id='contactus' className='anchor'></div>
         <h2>Kontakta oss</h2>
         <div className='row2'>
-            <a className='side' href='tel:+46764792433'>
+            <a className='side' href='tel:+46739806851'>
                     <LocalPhoneIcon/>
-                    <p>0764-792433</p>
+                    <p>0739-806851</p>
             </a>
             <a className='mid' href='mailto:starkare@starkarecrossfit.se'>
                     <EmailIcon/>

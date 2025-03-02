@@ -49,7 +49,7 @@ async function main(msg) {
             plainText: msg,
         },
         recipients: {
-            to: [{ address: "tobias199@gmail.com" }],
+            to: [{ address: "starkare@starkarecrossfit.se" }],
         },
     };
     const poller = await client.beginSend(emailMessage);
