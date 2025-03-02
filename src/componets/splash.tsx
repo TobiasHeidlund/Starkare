@@ -1,5 +1,5 @@
 import "./splash.css"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState} from 'react'
 import logo from '../assets/b1.jpg';
 
 type Props = {
@@ -8,18 +8,42 @@ type Props = {
 
 
 function Splash({setPopup}:Props) {
-  
+  const [homeImageHeight, setHomeImageHeight] = useState<number | null>(null);
+  const [splashHeight, setSplashHeight] = useState<number | null>(null);
+
+
   useEffect(()=>{
     document.getElementById("homeimage")?.classList.add("home")
     
     return () => document.getElementById("homeimage")?.classList.remove("home");
   },[])
+  useEffect(() => {
+    const homeImageElement = document.getElementById("homeimage");
+    if (homeImageElement) {
+        const height = homeImageElement.getBoundingClientRect().height;
+        setHomeImageHeight(height);
+    }
+}, []);
 
-  
+useEffect(() => {
+    const splashElement = document.getElementById("splash");
+    if (splashElement) {
+        const height = splashElement.getBoundingClientRect().height;
+        setSplashHeight(height);
+    }
+}, []);
+
+useEffect(() => {
+    console.log(`Height of homeimage: ${homeImageHeight}px`);
+    console.log(`Height of splash: ${splashHeight}px`);
+}, [homeImageHeight, splashHeight]);
+
+const bottomMargin = homeImageHeight && splashHeight ? homeImageHeight - splashHeight - 100 : 0;
+
 
 
   return (
-    <section id="splash" className="splash">
+    <section id="splash" className="splash" style={{ marginBottom: bottomMargin ? `${bottomMargin}px` : '0' }}>
         <div id='home'className="anchorbig"></div>
         <div className="centered">
         <h1>Kom i Form, Bli Stark & Må Bra</h1>

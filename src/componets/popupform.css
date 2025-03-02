@@ -8,6 +8,7 @@
     background-color: var(--green);
     padding: 2rem;
     border-radius: 1rem;
+    max-height: 100dvh;
     p{
         color: white;
     }
@@ -31,11 +32,13 @@
     
 }
 .form-section img{
+    min-height: 0rem;
     width: 50%;
     margin-left: 25%;
 }
 .form-section textarea{
-    height: 8rem;
+    min-height: 2rem;
+    height: 6rem;
     background-color: lightgrey;
     border-radius: 5px;
     padding: 0px 1rem;

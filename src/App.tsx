@@ -56,7 +56,25 @@ function App() {
     setContext(lcontext)
   }
 
-  
+  useEffect(() => {
+    const handleTouchMove = (event: TouchEvent) => {
+      if (count) {
+        event.preventDefault();
+      }
+    };
+
+    const rootElement = document.getElementById('myroot');
+    if (rootElement) {
+      rootElement.addEventListener('touchmove', handleTouchMove, { passive: false });
+    }
+
+    return () => {
+      if (rootElement) {
+        rootElement.removeEventListener('touchmove', handleTouchMove);
+      }
+    };
+  }, [count]);
+
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
