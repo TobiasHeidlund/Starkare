@@ -67,7 +67,7 @@ div .rehab{
                 float: end;
                 bottom: 0;
                 margin-top: 0;
-                font-size: clamp(.75rem, 2.5vw, 1.5rem);
+                font-size: clamp(.75rem, 2.5vw, 1rem);
                 
             }
 
