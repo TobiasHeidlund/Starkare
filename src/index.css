@@ -1,5 +1,5 @@
 :root {
-  
+  overflow: hidden;
   ---green: #209d50;
   --green: #16351b;
 
@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
 
-  --color: rgba(255, 255, 255, 0.87);
+  --color: rgb(116, 116, 116);
   --background-color: #ffffff;
   --text-color: black;
   --primary-colour: #313131;

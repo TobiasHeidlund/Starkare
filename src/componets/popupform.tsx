@@ -101,7 +101,7 @@ function popupform({shouldHaveDescription,context}:Props) {
                 className={(submitted||loading)?'form-hidden':''}
                 
                 />
-            <textarea id="comment" name='comment' hidden={shouldHaveDescription?false:true} value={formData.comment} // Controlled component
+            <textarea id="comment" name='comment' hidden={false} value={formData.comment} // Controlled component
                 onChange={handleChange} // Handle changes
                 className={(submitted||loading)?'form-hidden':''}
                 ></textarea>

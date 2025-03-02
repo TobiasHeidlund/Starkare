@@ -17,13 +17,13 @@ type Props = {
 
 function home({count,switchViewable,shouldHaveDescription}:Props) {
 
-
+  shouldHaveDescription = true
 
   return (
     <div className={count?'app-wrapper no-scroll':'app-wrapper'} >
       {//<PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} />
       }
-      <div className='app-content'>
+      <div className={count?'app-content no-scroll':'app-content'}>
       <Splash setPopup={switchViewable}/>
       <Services/>
       <Faq/>

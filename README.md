@@ -7,3 +7,4 @@
   5. Scrolla ner på sidan till "Commit changes"-sektionen.
   6. Skriv en beskrivning av de ändringar du har gjort i fältet med rubriken "Commit message".
   7. Klicka på knappen "Commit changes" för att spara dina ändringar till repot.
+

@@ -40,7 +40,7 @@ function App() {
       (document.getRootNode().lastChild?.lastChild as HTMLBodyElement).classList.add("dark")
     }
   },[])
-  
+
 
   const [count, setCount] = useState(false)
   const [shouldHaveDescription, setshouldHaveDescription] = useState(false)
@@ -56,14 +56,17 @@ function App() {
     setContext(lcontext)
   }
 
-  
+  useEffect(()=>{
+    (document.documentElement as HTMLElement).style.overflow = count ? 'hidden' : 'auto';
+  },[count])
+
   return (
     <BrowserRouter>
     <ScrollToAnchor/>
     <Top bannerText={prop.bannerText} menu={toggleMenu} darkmode={dakmode} active={prop.active}/>
     <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
     <HomeImage/>
-    <div id='myroot'>
+    <div id='myroot' className={count?'':'scroll'} >
       <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} context={context} />
       <Routes>
         <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>}> </Route>
