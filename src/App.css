@@ -26,6 +26,9 @@
 .no-scroll{
   overflow: hidden;
 }
+.scroll{
+  overflow: scroll;
+}
 .anchor{
   display: block;
   position: relative;

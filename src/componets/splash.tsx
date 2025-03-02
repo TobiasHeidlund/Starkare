@@ -33,11 +33,6 @@ useEffect(() => {
     }
 }, []);
 
-useEffect(() => {
-    console.log(`Height of homeimage: ${homeImageHeight}px`);
-    console.log(`Height of splash: ${splashHeight}px`);
-}, [homeImageHeight, splashHeight]);
-
 const bottomMargin = homeImageHeight && splashHeight ? homeImageHeight - splashHeight - 100 : 0;
 
 
