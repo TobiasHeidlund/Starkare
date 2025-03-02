@@ -17,7 +17,7 @@ type Props = {
 
 function home({count,switchViewable,shouldHaveDescription}:Props) {
 
-
+  shouldHaveDescription = true
 
   return (
     <div className={count?'app-wrapper no-scroll':'app-wrapper'} >
