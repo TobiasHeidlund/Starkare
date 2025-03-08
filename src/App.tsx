@@ -49,7 +49,9 @@ function App() {
         'Content-Type': 'application/json'
       }
     }).then((res) =>{
-      if(res.status != 200){
+      if(res.status == 200){
+        console.log("Pong")
+      }else{
         alert("Pong gick fel vänligen försök igen")
       }
     }).catch(error => {

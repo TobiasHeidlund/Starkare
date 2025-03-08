@@ -17,12 +17,12 @@ app.http('emailApi', {
         start = Date.now();
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
-        if (requestBody.contains('email":"ping"')) {
+        //if (requestBody.contains('email":"ping"')) {
             return new HttpResponse({
                 status: 200,
-                body: "Pong"
+                body: (typeof requestBody) + " " + requestBody
             });
-        }
+        //}
 
         //context.log(`Http function processed request body: "${requestBody}"`);
         try {
