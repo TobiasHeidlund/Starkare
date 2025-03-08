@@ -12,6 +12,8 @@ import Contactusv2 from './componets/contactusv2'
 import PopupPage from './pages/popupPage';
 import prop from '../bootcamp.json'
 import Gdpr from './pages/gdpr'
+import axios from 'axios';
+const apiUrl = import.meta.env.VITE_BACKENDURL;
 function App() {
  /* var prop = {
     active:true,
@@ -41,6 +43,20 @@ function App() {
     }
   },[])
 
+  useEffect(()=>{
+    axios.post('/api/emailApi', {email:"ping"}, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((res) =>{
+      if(res.status != 200){
+        alert("Pong gick fel vänligen försök igen")
+      }
+    }).catch(error => {
+      console.log(error)
+      alert("Pong gick fel vänligen försök igen")
+    })
+  },[]);
 
   const [count, setCount] = useState(false)
   const [shouldHaveDescription, setshouldHaveDescription] = useState(false)

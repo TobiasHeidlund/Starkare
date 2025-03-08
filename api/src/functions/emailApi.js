@@ -17,6 +17,13 @@ app.http('emailApi', {
         start = Date.now();
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
+        if (requestBody.contains('email":"ping"')) {
+            return new HttpResponse({
+                status: 200,
+                body: "Pong"
+            });
+        }
+
         //context.log(`Http function processed request body: "${requestBody}"`);
         try {
             // Call the main function to send the email
@@ -49,7 +56,7 @@ async function main(msg) {
             plainText: msg,
         },
         recipients: {
-            to: [{ address: "starkare@starkarecrossfit.se" }],
+            to: [{ address: "tobias199@gmail.com" }],
         },
     };
     const poller = await client.beginSend(emailMessage);
