@@ -76,6 +76,7 @@ function App() {
 
   useEffect(()=>{
     (document.documentElement as HTMLElement).style.overflow = count ? 'hidden' : 'auto';
+    console.log((document.documentElement as HTMLElement).style.overflow)
   },[count])
 
   return (
@@ -84,7 +85,7 @@ function App() {
     <Top bannerText={prop.bannerText} menu={toggleMenu} darkmode={dakmode} active={prop.active}/>
     <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
     <HomeImage/>
-    <div id='myroot' className={count?'':'scroll'} >
+    <div id='myroot' >
       <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} context={context} />
       <Routes>
         <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>}> </Route>
