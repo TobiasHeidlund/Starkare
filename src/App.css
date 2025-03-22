@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 .scroll{
-  overflow: scroll;
+  overflow: hidden;
 }
 .anchor{
   display: block;
