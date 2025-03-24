@@ -38,15 +38,15 @@ function faq() {
         title="Kan jag frysa mitt kort? "
         text="Ja, vi fryser kort vid särskilda omständigheter, t.ex skada, sjukdom eller graviditet. Vid frysning av medlemskap för sjukdom, skada och/eller graviditet skall intyg om orsak utfärdas av läkare, barnmorska, sjukgymnast naprapat eller motsvarande uppvisas. Frysning vid skada, sjukdom och graviditet gäller minst 30 dagar och max 365 dagar. 
 
-Frysning av medlemskap vid länge utlandsvistelse, högskolestudier, arbete eller militärtjänstgörning görs om minst 60 dagar och längst 365 dagar. Arbetsgivarintyg, studieintyg eller resehandling ska mailas in till starkare@starkarecrossfit.se i samband med att ansökan om frysning via formulär nedan skickas in. 
+Frysning av medlemskap vid länge utlandsvistelse, högskolestudier, arbete eller militärtjänstgörning görs om minst 60 dagar och längst 365 dagar. Arbetsgivarintyg, studieintyg eller resehandling ska mailas in till starkare@starkarecrossfit.se i samband med att ansökan om frysning via mail skickas in. 
 
 Vi fryser inte kort retroaktivt. 
 
-Maila er ansökan till starkare@starkarecrossfit.se "
+Maila er ansökan till starkare@starkarecrossfit.se"
         />
         <CardExp 
         title="Jag vill säga upp mitt kort, vad gäller?"
-        text="Månadskort (10 pass/månad eller obegränsat) har alltid 3 månaders uppsägning. Uppsägningstiden räknas från det datumet då uppsägningen kom in. Månadskort är ett löpande avtal som fortsätter månad för månad tills en ansökan via formuläret nedan skickas in eller via mail."
+        text="Månadskort (10 pass/månad eller obegränsat) har alltid 3 månaders uppsägning. Uppsägningstiden räknas från det datumet då uppsägningen kom in. Månadskort är ett löpande avtal som fortsätter månad för månad tills en ansökan via mail skickas in."
         />
     </section>
   )
