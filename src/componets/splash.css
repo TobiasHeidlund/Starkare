@@ -16,6 +16,7 @@
     h1{
         color: white;
         font-stretch: expanded;
+        font-size: clamp(2.2rem, 5vw, 3.2em);
     }
     h3{
         color: white;

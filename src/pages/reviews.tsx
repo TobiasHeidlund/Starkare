@@ -6,15 +6,15 @@ function reviews() {
     var reviews = [
         {
           comment:"Bästa boxen! Har tränat hos Starkare i drygt ett år nu och kommer aldrig att sluta. De hjälpte mig att komma tillbaka efter en axelskada när jag aldrig trodde jag skulle kunna träna ngt ovanför axelhöjd igen. Utöver det är det så fantastiskt go stämning. Kunniga och engagerade coacher och härliga medlemmar!",
-          author:"Elin Schylander"  
+          author:"Elin S"  
         },
         {
             comment: "Att börja träna på Starkare är det bästa beslutet jag tagit inom träning! Otroligt duktiga och engagerade coacher och bra stämning mellan alla medlemmar :)",
-            author: "Paulina Villman"    
+            author: "Paulina V"    
         },
         {
             comment:"Väldigt kunniga och trevliga coacher samt roliga och mångsidiga pass! Vill även varmt rekommendera kostrådgivningen samt PT som har bidragit till en drastisk förändring i både styrka och ork.",
-            author: "Niklas Lundberg"
+            author: "Niklas L"
         }
     ]
 
