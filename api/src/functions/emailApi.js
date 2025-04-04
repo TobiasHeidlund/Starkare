@@ -80,6 +80,7 @@ async function main(msg) {
     }
 
     if (poller.getResult().status === KnownEmailSendStatus.Succeeded) {
+        context.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
         console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
     } else {
         context.error(`Request Failed message "${emailMessage}"`);
