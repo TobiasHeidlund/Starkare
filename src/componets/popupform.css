@@ -1,5 +1,5 @@
 .form-section form {
-    overflow: scroll;
+    overflow: visible;
     color: black;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
     height: fit-content;
     justify-content: center;
     position: fixed;
-    overflow: scroll;
+    overflow: visible;
     
 }
 .form-section{

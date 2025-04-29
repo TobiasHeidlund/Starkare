@@ -18,7 +18,7 @@ function services( ) {
         <CardBox title={"Personlig träning"} text={"Träning med en personlig coach innebär ett skräddarsytt upplägg som är helt anpassat efter dina behov och mål. Här får du individuell guidning,"+
         " kontinuerlig feedback och ett program som optimerar din utveckling, oavsett om du vill bli starkare, förbättra din kondition eller skapa en hälsosam livsstil. \nPris: 850kr/timme. "} boxname={"cardbox"}/>
         <CardBox title={"Physioterap/rehab"} text={"Om du har en långvarig smärtproblematik, eller om du har råkat ut för en akut skada kan vi på Starkare CrossFit hjälpa dig att bli av med dina smärtor i muskler och leder. "+
-        "Detta gör vi med hjälp av individanpassad rehab och manuell behandling. \nPriser: Nybesök 650kr/45 min. Återbesök 500kr/30min. "} boxname={"cardbox"}/>
+        "Detta gör vi med hjälp av individanpassad rehab och manuell behandling. \nPriser:\n Nybesök 650kr/45 min.\nÅterbesök 500kr/30min. "} boxname={"cardbox"}/>
         <CardBox title={"Företagsträning"} text={"Om ni vill ha en piggare, friskare och mer motiverad personal är detta en del av lösningen! Vi erbjuder skräddarsydd träning för ert företag, där vi kombinerar hälsa med team-building."+
           " Ett utmärkt sätt att stärka gemenskapen samtidigt som ni satsar på välmående och prestation. En investering som gynnar både medarbetare och företagets framgång. Hör av er för en offert!"} boxname={"cardbox"}/>
       </section>

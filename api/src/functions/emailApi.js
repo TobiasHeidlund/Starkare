@@ -17,6 +17,13 @@ app.http('emailApi', {
         start = Date.now();
         context.log(`Http function processed request for url "${request.url}"`);
         const requestBody = await request.text();
+        if (requestBody == '{"email":"ping"}') {
+            return new HttpResponse({
+                status: 200,
+                body: (typeof requestBody) + " " + requestBody
+            });
+        }
+
         //context.log(`Http function processed request body: "${requestBody}"`);
         try {
             // Call the main function to send the email
@@ -73,6 +80,7 @@ async function main(msg) {
     }
 
     if (poller.getResult().status === KnownEmailSendStatus.Succeeded) {
+        context.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
         console.log(`Successfully sent the email (operation id: ${poller.getResult().id})`);
     } else {
         context.error(`Request Failed message "${emailMessage}"`);
