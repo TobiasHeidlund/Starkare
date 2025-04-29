@@ -13,6 +13,7 @@ import PopupPage from './pages/popupPage';
 import prop from '../bootcamp.json'
 import Gdpr from './pages/gdpr'
 import axios from 'axios';
+
 const apiUrl = import.meta.env.VITE_BACKENDURL;
 function App() {
  /* var prop = {
