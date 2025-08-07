@@ -7,6 +7,7 @@ import Bootkamp from './pages/bootkamp'
 import HomeImage from './componets/homeImage';
 import ScrollToAnchor from './componets/ScrollToAnchor';
 import Rehab from './pages/rehab';
+import Kids from './pages/kids';
 import Togglemenu from './componets/togglemenu';
 import Contactusv2 from './componets/contactusv2'
 import PopupPage from './pages/popupPage';
@@ -93,6 +94,7 @@ function App() {
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
         <Route path="/dark" element={ <Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
         <Route path="/rehab" element={ <Rehab setPopup={switchViewable}/>} />
+        <Route path="/kids" element={ <Kids setPopup={switchViewable}/>} />
         <Route path="/gdpr-policy" element={ <Gdpr/>} />
       </Routes>
       <Contactusv2 setPopup={switchViewabledesc}/>

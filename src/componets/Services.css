@@ -4,6 +4,10 @@
     justify-content: space-evenly;
     align-items: center;
     flex: 'flex-grow';
+    a{
+        color: #FFD700; /* Guld/gul */
+        text-decoration: underline;
+    }
 }
 .cardwrapper{
     color: var(--text-color);

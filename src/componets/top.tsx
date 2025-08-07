@@ -39,7 +39,7 @@ function header({bannerText, menu, darkmode, active}:Props) {
         </Link>
         <ul className='list'>
             <li><Link to='/#home'>HEM</Link></li>
-            <li><Link to='/rehab#rehab'>REHAB</Link></li>
+            <li><Link to='/kids#rehab'>KIDS</Link></li>
             <li><Link to='/#cards'>VÅRA TJÄNSTER</Link></li>
             <li><Link to='/#faq'>VANLIGA FRÅGOR</Link></li>
             <li><Link to='/#schema'>SCHEMA</Link></li>
