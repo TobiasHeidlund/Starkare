@@ -31,7 +31,7 @@ function kids({setPopup}:Prop) {
       <CardBox title={"Grupp 3: "} text={"13-16 år: \nTisdagar 19.30-20.30"}boxname={"cardbox4"}/>
       </section>
       <p>Det behöver vara minst 5 barn i en grupp för att gruppen ska bli av. Vi skickar ut faktura via mail för terminen när vi har fastställt att en grupp blir av. Återanmälningar från vårens termin har förtur fram tills den 4 augusti, sen släpper vi platser till väntelista.</p>
-      <h3>Terminen startar v. 35 och håller på till v.50 med uppehåll för höstlov och röda dagar.</h3>
+      <h3>Terminen startar v. 40 och håller på till v.50 med uppehåll för höstlov och röda dagar.</h3>
     </div>
    
 
