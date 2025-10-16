@@ -24,6 +24,7 @@ function nyborjare({setPopup}:Prop) {
       <CardBox title={""} text={"Under fem veckor (onsdagar kl. 19.30–20.30) guidar våra erfarna coacher dig genom grunderna inom CrossFit. Du får lära dig rätt teknik i övningar som knäböj, marklyft, pressar och dragövningar – rörelser som bygger styrka, stabilitet och kroppskontroll."} boxname={"cardbox3"}/>
       <CardBox title={""} text={"Kursen ger dig inte bara kunskap om hur du tränar säkert och effektivt, utan också en starkare grund för din fortsatta träning – oavsett om du vill fortsätta hos oss eller på egen hand. Många som går kursen upptäcker hur mycket glädje, energi och gemenskap som finns i CrossFit – och fortsätter som en del av vårt härliga Starkare-gäng."} boxname={"cardbox3"}/>
       <CardBox title={""} text={"💛 Alla kan börja någonstans. Låt oss hjälpa dig hitta glädjen i träning och bygga en styrka som håller – både i kroppen och i vardagen. \n👉 Begränsat antal platser – anmäl dig och säkra din plats redan idag!"} boxname={"cardbox3"}/>
+      <CardBox title={""} text={"START: 12/11 2025 \nLÄNGD: 5 veckor\nTID: Onsdagar 19.30-20.30\n PLATS: Starkare Crossfit, Analysvägen 7A\n PRIS: 1500 kr, faktura 30 dagar. Friskvård går bra att använda. "} boxname={"cardbox3"}/>
     </section>
     <button onClick={()=>{setPopup("Boka Nybörjarkurs")}}>Kontakta oss</button>
     </section>
