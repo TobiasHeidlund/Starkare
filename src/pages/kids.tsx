@@ -26,9 +26,8 @@ function kids({setPopup}:Prop) {
       <h2>Träning som passar alla - från nyfikna nybörjare till unga atleter</h2>
       <p>Starkare Kids riktar sig till barn i åldrarna 7-16 år och är uppdelat i tre grupper baserat på ålder och erfarenhet. Våra pass är utformade för att vara roliga, utmanande och inkluderande, med fokus på lekfull funktionell träning, kroppskontroll och lagkänsla.<br></br><br></br>Här bygger vi inte bara starka kroppar - vi bygger starka barn!</p>
       <section className='cardContaienr3'>
-      <CardBox title={"Grupp 1: "} text={"7-10 år: \nMåndagar 16.00-16.45"} boxname={"cardbox4"}/>
-      <CardBox title={"Grupp 2: "} text={"11-15 år: \nTorsdagar 16.00-16:45"}boxname={"cardbox4"}/>
-      <CardBox title={"Grupp 3: "} text={"13-16 år: \nTisdagar 19.30-20.30"}boxname={"cardbox4"}/>
+      <CardBox title={"Grupp 1: "} text={"11-15 år: \nTorsdagar 16.00-16:45 \n Pris: 2500/termin"}boxname={"cardbox4"}/>
+      <CardBox title={"Grupp 2: "} text={"13-16 år: \nTisdagar 19.30-20.30 \n Pris: 2500/termin"}boxname={"cardbox4"}/>
       </section>
       <p>Det behöver vara minst 5 barn i en grupp för att gruppen ska bli av. Vi skickar ut faktura via mail för terminen när vi har fastställt att en grupp blir av. Återanmälningar från vårens termin har förtur fram tills den 4 augusti, sen släpper vi platser till väntelista.</p>
       <h3>Terminen startar v. 40 och håller på till v.50 med uppehåll för höstlov och röda dagar.</h3>
