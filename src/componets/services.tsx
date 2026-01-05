@@ -18,9 +18,10 @@ function services( ) {
         <CardBox title={"Personlig träning"} text={"Träning med en personlig coach innebär ett skräddarsytt upplägg som är helt anpassat efter dina behov och mål. Här får du individuell guidning,"+
         " kontinuerlig feedback och ett program som optimerar din utveckling, oavsett om du vill bli starkare, förbättra din kondition eller skapa en hälsosam livsstil. \nPris: 850kr/timme. "} boxname={"cardbox"}/>
         <CardBox title={"Mamma träning"} text={"Syftet är att du ska få komma igång med din träning på ett roligt, effektivt och inspirerande sätt. Träningsglädje och gemenskap står i fokus och alla kan delta - ingen tidigare kunskap eller träningserfarenhet krävs."} boxname={"cardbox"} link={<Link to='/mamma#mamma'>Klicka här för mer information</Link>}/>
+        <CardBox title={"Kostrådgivning"} text={"Få en individuellt anpassad plan från en licensierad kostrådgivare för att nå dina mål."}  boxname={"cardbox"}/>
         <CardBox title={"Företagsträning"} text={"Om ni vill ha en piggare, friskare och mer motiverad personal är detta en del av lösningen! Vi erbjuder skräddarsydd träning för ert företag, där vi kombinerar hälsa med team-building."+
           " Ett utmärkt sätt att stärka gemenskapen samtidigt som ni satsar på välmående och prestation. En investering som gynnar både medarbetare och företagets framgång. Hör av er för en offert!"} boxname={"cardbox"}/>
-        <CardBox title={"Kostrådgivning"} text={"Få en individuellt anpassad plan från en licensierad kostrådgivare för att nå dina mål."}  boxname={"cardbox"}/>
+        
       </section>
     </div>
   )
