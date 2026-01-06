@@ -15,6 +15,7 @@ import prop from '../bootcamp.json'
 import Gdpr from './pages/gdpr'
 import axios from 'axios';
 import Nyborjare from './pages/nyborjare';
+import Mamma from './pages/mamma';
 
 const apiUrl = import.meta.env.VITE_BACKENDURL;
 function App() {
@@ -95,6 +96,7 @@ function App() {
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
         <Route path="/dark" element={ <Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
         <Route path='/nyborjare' element={ <Nyborjare setPopup={switchViewable} />} />
+        <Route path="/mamma" element={ <Mamma setPopup={switchViewable}/>} />
         <Route path="/rehab" element={ <Rehab setPopup={switchViewable}/>} />
         <Route path="/kids" element={ <Kids setPopup={switchViewable}/>} />
         <Route path="/gdpr-policy" element={ <Gdpr/>} />
