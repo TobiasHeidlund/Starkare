@@ -48,8 +48,12 @@ function header({bannerText, menu, darkmode, active}:Props) {
         </ul>
         <Menu className='expand' onClick={menu}/>
     </div>
+    
     </div>
-
+    <div className='email-issue-box'>
+        <p>För närvarande har vi tekniska problem med e-postmeddelanden. Kontakta oss på angelicameurk@gmail.com</p>
+    </div>
+    
     </header>
   
   )
