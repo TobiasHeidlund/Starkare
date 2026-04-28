@@ -21,7 +21,7 @@ function popupform({shouldHaveDescription,context}:Props) {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const apiUrl = import.meta.env.VITE_BACKENDURL;
+  const apiUrl = import.meta.env.VITE_BACKENDURL ?? '/api/emailApi';
  
   //<!--<input type={shouldHaveDescription? "text":"hidden"} name='descrip' id="descri" placeholder='Message'/>>
   function submitForm(formData2: React.FormEvent<HTMLFormElement>) {
@@ -29,7 +29,7 @@ function popupform({shouldHaveDescription,context}:Props) {
     setLoading(true)
     console.log(formData)
     //MAKE SURE THAT THE USER UNDERSTAD THAT IS DOES NOT WORK
-    axios.post('/api/emailApi',formData, {
+    axios.post(apiUrl,formData, {
       headers: {
         'Content-Type': 'application/json'
       }
