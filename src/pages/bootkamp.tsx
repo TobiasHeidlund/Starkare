@@ -22,7 +22,7 @@ type Props = {
 
 
 function bootkamp(prop:Props) {
-    const apiUrl = import.meta.env.VITE_BACKENDURL;
+    const apiUrl = import.meta.env.VITE_BACKENDURL ?? '/api/emailApi';
     const [submitted, setSubmitted] = useState(false);
         // State for form fields
         const [formData, setFormData] = useState({
