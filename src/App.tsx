@@ -11,7 +11,7 @@ import Kids from './pages/kids';
 import Togglemenu from './componets/togglemenu';
 import Contactusv2 from './componets/contactusv2'
 import PopupPage from './pages/popupPage';
-import prop from '../bootcamp.json'
+import prop from './bootcampData.json'
 import Gdpr from './pages/gdpr'
 import axios from 'axios';
 import Nyborjare from './pages/nyborjare';
@@ -84,7 +84,7 @@ function App() {
   },[count])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
     <ScrollToAnchor/>
     <Top bannerText={prop.bannerText} menu={toggleMenu} darkmode={dakmode} active={prop.active}/>
     <Togglemenu menu={menu} toggleMeny={toggleMenu}/>
@@ -92,8 +92,9 @@ function App() {
     <div id='myroot' >
       <PopupPage display={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription} context={context} />
       <Routes>
-        <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>}> </Route>
+        <Route path="/" element={<Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
         <Route path="/bootcamp" element={<Bootkamp content={prop}/>} />
+        <Route path="/bootkamp" element={<Bootkamp content={prop}/>} />
         <Route path="/dark" element={ <Home count={count} switchViewable={switchViewable} shouldHaveDescription={shouldHaveDescription}/>} />
         <Route path='/nyborjare' element={ <Nyborjare setPopup={switchViewable} />} />
         <Route path="/mamma" element={ <Mamma setPopup={switchViewable}/>} />
