@@ -71,32 +71,27 @@ function bootkamp(prop:Props) {
         
         <div className="anchorbig" id="bootcamp"></div>
         <section className='head'>
-            <h1>Bootcamp start {prop.content.date}</h1>
+            <h1>Bootcamp: Sista rycket inför sommaren</h1>
         </section>
         <section className='body'>
-            <h2>Nytt bootcamp startar i {prop.content.date}</h2>
             <p>Fyll i formuläret nedan för att boka din plats</p>
-            <p>Känner du dig otränad och behöver komma igång med något nytt till {prop.content.timeofyear}?<br/>Eller vill du hitta en ny träningsform?🏋</p>
-            <p>Till {prop.content.timeofyear} startar en ny Bootcamp-grupp!<br/>
-            Målet med gruppen är att komma igång med träningen på ett bra sätt och göra det till en del i din vardag.
-            Gruppen är dessutom ett perfekt sätt att lära sig grunderna i CrossFit för att sen börja träna hos oss 🎉</p>
+            <p>NU ÄNTLIGEN är det dags för ett nytt bootcamp i CrossFit för dig som är nybörjare eller behöver komma igång! Vi tränar i en liten grupp på söndagar 18.30 och onsdagar 19.30 i fyra veckor. Vi drar igång den 17 maj!</p>
             <p className='margin0bottom'>Detta ingår:</p>
             <ul className='list'>
-                <li>2 pass/vecka i 6 veckor</li>
-                <li>Varje pass leds av en utbildad instruktör</li>
+                <li>2 pass/vecka i 4 veckor</li>
+                <li>Coach är Angelica Meurk, ägare av Starkare CrossFit (med undantag för vissa tillfällen då vikarie hoppar in)</li>
                 <li>Rolig och effektiv träning som ger resultat</li>
                 <li>Kostrådgivning med personligt anpassat upplägg efter dina mål</li>
-                <li>2 InBody-vägningar</li>
                 <li>Tips och råd för att förbättra sömn och hantera stress</li>
                 <li>Mängder med recept och tips</li>
                 <li>Max 12 platser så att du får mycket hjälp och uppmärksamhet</li>
+                <li>Valfritt tillägg: 2 InBody-vägningar (pris 400kr)</li>
             </ul>
             <ul className='list2'>
                 <li>Start: {prop.content.date}</li>
                 <li>Längd: {prop.content.lengh}</li>
                 <li>Tid: {prop.content.time}</li>
                 <li>Pris: {prop.content.price}</li>
-                <li>{prop.content.price2}</li>
                 <li>Plats: {prop.content.place}</li>
             </ul>
             <h3>Vi kommer höra av oss till dig så fort vi kan för att bekräfta din bokning. Vi ser fram emot att träffa dig!</h3>
